@@ -1,0 +1,3 @@
+[submodule "turbopelican"]
+	path = turbopelican
+	url = git@github.com:turbopelican/turbopelican

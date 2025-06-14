@@ -6,7 +6,7 @@ timezone  = "Pacific/Auckland"
 
 default_lang = "en"
 
-path = "content"
+path = "turbopelican/docs"
 
 default_pagination = false
 
