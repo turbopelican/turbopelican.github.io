@@ -442,11 +442,19 @@ dependencies = [
     { name = "turbopelican" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "pygments" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "pelican", extras = ["markdown"], specifier = ">=4.11.0" },
     { name = "turbopelican", specifier = ">=0.3.3" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pygments", specifier = ">=2.18.0" }]
 
 [[package]]
 name = "typing-extensions"

@@ -3,17 +3,79 @@
 		<meta charset="UTF-8">
 		<title>{{ SITENAME }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Personal page for {{ AUTHOR }}">
+		<meta name="description" content="Turbopelican – the fastest way to create GitHub Pages with Pelican">
 		<link rel="stylesheet" type="text/css" href="{{ SITE_URL }}/theme/css/styles.css">
+		<link rel="stylesheet" type="text/css" href="{{ SITE_URL }}/theme/css/pygments.css">
+		<meta rel="canonical" href="https://turbopelican.github.io">
+		<meta name="robots" content="index, follow">
 	</head>
 	<body>
 		<header>
-			<a href="/">
-				<h1>{{ SITENAME }}</h1>
-			</a>
+			<nav class="big-screen">
+				<img width="95" alt="Silhouette of flying pelican" src="/images/logo-inverted.svg" />
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/get-started">Get started</a>
+					</li>
+					<li>
+						<a href="/configuration">Configuration</a>
+					</li>
+					<li>
+						<a href="/release-notes">Release notes</a>
+					</li>
+					<li>
+						<a href="/other-links">Other links</a>
+					</li>
+				</ul>
+			</nav>
+			<details class="hamburger-menu small-screen">
+				<summary>
+					<nav>
+						<div>
+							<img width="95" alt="Silhouette of flying pelican" src="/images/logo-inverted.svg" />
+						</div>
+						<div>
+							<div class="hamburger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</nav>
+				</summary>
+				<nav class="drop-down">
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/get-started">Get started</a>
+					</li>
+					<li>
+						<a href="/configuration">Configuration</a>
+					</li>
+					<li>
+						<a href="/release-notes">Release notes</a>
+					</li>
+					<li>
+						<a href="/other-links">Other links</a>
+					</li>
+				</ul>
+				</nav>
+			</details>
 		</header>
-		<main>
-			{% block content %}{% endblock %}
-		</main>
+		<div class="scrollable">
+			<div class="subbody">
+				<main>
+					<article>
+						{% block content %}{% endblock %}
+					</article>
+				</main>
+				<footer>Created by Elliot Simpson</footer>
+			</div>
+		</div>
 	</body>
 </html>

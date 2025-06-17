@@ -16,6 +16,9 @@ jobs:
         with:
           version: "0.6.8"
       - run: uv sync
+      - name: Generate release notes
+        run: cat turbopelican/CHANGELOG.md >> turbopelican/docs/release-notes.md
+      - run: sed -i '/# Changelog/c\# Release notes' turbopelican/docs/release-notes.md
       - name: Generate content
         env:
           TURBOPELICAN_CONFIG_TYPE: PUBLISH
